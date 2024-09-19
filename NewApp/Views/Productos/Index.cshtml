@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Producto>
+
+<h1>Lista de Productos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var producto in Model)
+
+        {
+            <tr>
+                <td>@producto.nIdProduct</td>
+                <td>@producto.cNombProdu</td>
+                <td>@producto.nPrecioProd.ToString("C")</td>
+                <td>@producto.Categoria.cNombCateg</td>
+            </tr>
+        }
+    </tbody>
+</table>
